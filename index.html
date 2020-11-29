@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Game Jam 2011: Game Of Lifes</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+  <script type="text/javascript" src="js/config.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/graphics.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/population.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/rules.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/ui.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/game.js" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+    function main() {
+      G.init();
+      UI.init();
+      R.init();
+      Game.init();
+    }
+  </script>
+</head>
+<body onload="main();">
+  <div id="Copyright">
+    © Copyright 2011
+    <br/>
+    Petras Zdanavičius petraszd&lt;a&gt;gmail.com.
+    <br/>
+    All Rights Reserved.
+  </div>
+
+  <div id="Wrapper">
+    <div id="Info" style="display: block;">
+
+      <div id="StartScreen" style="display: block;">
+        <p style="font-size: 120%; color: #d1bb80;">Colorful Greedy Populations</p>
+        <button id="StartButton" style="display: none;">Start Game</button>
+        <p style="font-size: 80%; padding: 50px 150px; text-align: left;">
+        Do NOT allow one color to destroy another ones by using buttons near
+        the map.
+        </p>
+      </div>
+
+      <div id="EndScreen" style="display: none;">
+        <p>Sorry, You lost</p>
+        <button id="EndButton">Restart Level</button>
+      </div>
+
+      <div id="NextScreen" style="display: none;">
+        <p></p>
+        <button id="NextButton">Next Level</button>
+      </div>
+
+      <div id="WinScreen" style="display: none;">
+        <p>
+        <span style="font-size: 28px;">Congratulations !!!</span>
+        <br/>
+        You Win
+        </p>
+        <button id="WinButton">Restart Game</button>
+        <p id="Lights">
+        <img src="img/green-item.png" alt="" />
+        <img src="img/blue-item.png" alt="" />
+        <img src="img/red-item.png" alt="" />
+        <img src="img/yellow-item.png" alt="" />
+        </p>
+      </div>
+
+    </div>
+    <div id="Content">
+      <canvas width="600" height="600" id="Canvas"></canvas>
+      <div id="Controls">
+        <ul id="Buttons">
+          <li class="timer" >Timer: <br/><span id="TimeToVictory">#</span></li>
+          <li><img id="Green" src="img/green-btn.png" alt="GREEN" /></li>
+          <li><img id="Blue" src="img/blue-btn.png" alt="BLUE" /></li>
+          <li><img id="Yellow" src="img/yellow-btn.png" alt="YELLOW" /></li>
+          <li><img id="Red" src="img/red-btn.png" alt="RED" /></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
